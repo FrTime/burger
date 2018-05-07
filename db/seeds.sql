@@ -1,5 +1,5 @@
 INSERT INTO
-    burgers (burger_name, devoured)
+    burgers (name, eaten)
 VALUES
     ("Plain Jane", false),
     ("The All-American", true),

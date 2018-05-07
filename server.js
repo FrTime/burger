@@ -9,9 +9,11 @@ const express = require("express"),
 // Setting the 'public' folder as a static directory to serve to the app
 app.use(express.static("public"));
 
-// Setting up body-parser
+// Setting up body-parser and handlebars
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // Setting routes
 app.use(routes);
