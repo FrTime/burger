@@ -25,7 +25,7 @@ router.put("/api/burgers/:id", (req, res) => {
   console.log("condition", condition);
   burger.update(
     {
-      eaten: req.body.eaten
+      eaten: true
     },
     condition,
     result => {

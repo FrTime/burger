@@ -1,9 +1,8 @@
-<li>
-	{{name}}
+<li class="collection-item">
+    <h5>{{name}}</h5> {{#if eat}}
+    <button class="change-eat waves-effect waves-light btn-floating teal lighten-1" data-id="{{id}}" data-neweat="{{eat}}">
+        Eat
+    </button>{{/if}}
 
-	<button class="change-eat" data-id="{{id}}" data-neweat="{{eat}}">
-		{{#if eat}}Cook Another{{else}}Eat{{/if}}
-	</button>
-
-	<button class="delete-burger" data-id="{{this.id}}">Delete Burger</button>
+    <button class="delete-burger waves-effect waves-light btn-small red lighten-1" data-id="{{this.id}}">Delete Burger</button>
 </li>
