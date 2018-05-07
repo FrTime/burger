@@ -1,6 +1,12 @@
 // Setting requirement for mySQL
-const mysql = require("mysql"),
-  // Setting connection to the burger_db database
+const mysql = require("mysql");
+
+// Setting connection to the burger_db database
+var connection;
+
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
   connection = mysql.createConnection({
     port: 3306,
     host: "localhost",
@@ -8,6 +14,7 @@ const mysql = require("mysql"),
     password: "",
     database: "burgers_db"
   });
+}
 
 // Connecting to the database
 connection.connect(error => {
